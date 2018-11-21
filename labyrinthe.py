@@ -22,13 +22,27 @@ level_1 = [
     "+----------------------------+"  
 ]
 
-# Affiche un labyrinthe passé en entrée
+# Déclaration du personnage et de sa position initiale
+perso = "X"
+pos_perso = [1, 1]
+
 def affiche_labyrinthe (lab):
+    """
+        Affichage d'un labyrinthe
+
+        lab: Variable contenant le labyrinthe
+    """
+    nb_ligne=0
     for ligne in lab:
         print(ligne)
-
-# Construit un labyrinthe custom à base de la taille passée en entrée
+        nb_ligne++
+        
 def affiche_bordure_labyrinthe(taille):
+    """
+        Construit un labyrinthe custom
+
+        taille: Variable contenant la taille (longueur et largeur) du labyrinthe
+    """
     longueur=(taille-2)*2
     print("La longueur = ",longueur)
     print("+{}+".format("-" * (longueur-2)))
